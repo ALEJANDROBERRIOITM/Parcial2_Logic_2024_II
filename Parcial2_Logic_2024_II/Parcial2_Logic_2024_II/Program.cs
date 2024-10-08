@@ -31,7 +31,7 @@ internal class Program
             int Turno = 0;
 
             Console.Clear();
-            Console.WriteLine($"¡Bienvenidos al juego! El número ha sido seleccionado entre 0 y 100 {ObtenerRango(cantidadJugadores)}.");
+            Console.WriteLine($"¡Bienvenidos al juego de Berrio! El número ha sido seleccionado entre 0 y 100 {ObtenerRango(cantidadJugadores)}.");
 
             while (!ganador)
 

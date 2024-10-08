@@ -36,7 +36,7 @@ internal class Program
             while (!ganador)
 
             {
-                Console.WriteLine($"\nTurno del jugador {turno + 1}:");
+                Console.WriteLine($"\nTurno del jugador {Turno + 1}:");
                 Console.Write("Ingrese su número: ");
                 int intento = int.Parse(Console.ReadLine());
 
@@ -84,7 +84,7 @@ internal class Program
             case 4:
                 return 200;
             default:
-                return 0; // No debería llegar aquí
+                return 0; // No debería llegar hasta aca
 
 
 

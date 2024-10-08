@@ -9,10 +9,18 @@ internal class Program
         //y lo guarda en memoria sin ser revelado.
 
         // valores de entrada
+
         random random = new Random();
         bool jugar = true;
 
+        while (jugar)
+        {
+            int cantidadJugadores = 0;
 
-        Console.WriteLine("Hello, World!");
+            // Solicitar el número de jugadores en el juego
+
+
+
+
+        }
     }
-}

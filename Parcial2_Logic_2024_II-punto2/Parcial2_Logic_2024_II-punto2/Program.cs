@@ -26,38 +26,31 @@ internal class Program
                     nombres.Add(nombre);
                     List<double> notas = new List<double>();
 
-                    
+                    while (true)
+                    {
+                        Console.Write($"Ingrese una nota para {nombre} (0.0 - 5.0, o 'fin' para terminar): ");
+                        string entradaNota = Console.ReadLine();
+
+                        if (entradaNota.ToLower() == "fin")
+                            break;
+
+                        if (double.TryParse(entradaNota, out double nota) && nota >= 0.0 && nota <= 5.0)
+                        {
+                            notas.Add(nota);
+                        }
+                        else
+                        {
+                            Console.WriteLine("La nota debe estar entre 0.0 y 5.0");
+                        }
+                    }
+
+                    if (notas.Count > 0)
+                    {
+                        double promedio = CalcularPromedio(notas);
+                        promedios.Add(promedio);
+                        string categoria = ClasificarEstudiante(promedio);
+                        Console.WriteLine($"{nombre} tiene un promedio de {promedio:F2} y está en la categoría {categoria}.");
+                    }
                 }
 
-                // Pregunta si desea ingresar otro grupo de estudiantes
-                Console.Write("\n¿Desea ingresar otro grupo de estudiantes? (s/n): ");
-                if (Console.ReadLine().ToLower() != "s")
-                    break;
-            }
-        }
-
-        static double CalcularPromedio(List<double> notas)
-        {
-            double suma = 0;
-            foreach (double nota in notas)
-            {
-                suma += nota;
-            }
-            return suma / notas.Count;
-        }
-
-        static string ClasificarEstudiante(double promedio)
-        {
-            if (promedio >= 4.5)
-                return "Excelente";
-            else if (promedio >= 4.0)
-                return "Sobresaliente";
-            else if (promedio >= 3.5)
-                return "Bueno";
-            else
-                return "Insuficiente";
-        }
-    }
-    
-    
-}
+                

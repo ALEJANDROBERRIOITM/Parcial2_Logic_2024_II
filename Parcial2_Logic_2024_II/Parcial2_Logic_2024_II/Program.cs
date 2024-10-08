@@ -19,8 +19,16 @@ internal class Program
 
             // Solicitar el número de jugadores en el juego
 
+            while (cantidadJugadores < 2 || cantidadJugadores > 4)
+            {
+                Console.Write("Ingrese el número de jugadores (2 a 4): ");
+                cantidadJugadores = int.Parse(Console.ReadLine());
+            }
+
+
 
 
 
         }
     }
+}

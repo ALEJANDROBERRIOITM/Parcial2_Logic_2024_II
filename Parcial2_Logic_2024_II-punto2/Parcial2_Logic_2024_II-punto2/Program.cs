@@ -53,4 +53,35 @@ internal class Program
                     }
                 }
 
-                
+                // Pregunta si desea ingresar otro grupo de estudiantes
+                Console.Write("\n¿Desea ingresar otro grupo de estudiantes? (s/n): ");
+                if (Console.ReadLine().ToLower() != "s")
+                    break;
+            }
+        }
+
+        static double CalcularPromedio(List<double> notas)
+        {
+            double suma = 0;
+            foreach (double nota in notas)
+            {
+                suma += nota;
+            }
+            return suma / notas.Count;
+        }
+
+        static string ClasificarEstudiante(double promedio)
+        {
+            if (promedio >= 4.5)
+                return "Excelente";
+            else if (promedio >= 4.0)
+                return "Sobresaliente";
+            else if (promedio >= 3.5)
+                return "Bueno";
+            else
+                return "Insuficiente";
+        }
+    }
+    
+    
+}

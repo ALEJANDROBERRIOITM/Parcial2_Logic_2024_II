@@ -10,7 +10,7 @@ internal class Program
 
         // valores de entrada
 
-        random random = new Random();
+        Random random = new Random();
         bool jugar = true;
 
         while (jugar)
@@ -24,7 +24,16 @@ internal class Program
                 Console.Write("Ingrese el número de jugadores (2 a 4): ");
                 cantidadJugadores = int.Parse(Console.ReadLine());
             }
+            // Generar el cambio de número aleatorio según los jugadores
 
+            int numeroAleatorio = GenerarNumeroAleatorio(cantidadJugadores, random);
+            bool ganador = false;
+            int Turno = 0;
+
+            Console.Clear();
+            Console.WriteLine($"¡Bienvenidos al juego! El número ha sido seleccionado entre 0 y {ObtenerRango(cantidadJugadores)}.");
+
+            while (!ganador)
 
 
 

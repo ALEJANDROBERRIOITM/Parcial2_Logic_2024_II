@@ -92,6 +92,27 @@
     // Método para mostrar la matriz en pantalla
     static void MostrarMatriz(int[,] matriz, int posX, int posY, int total)
     {
+        Console.WriteLine($"Total acumulado: {total}\n");
+        for (int i = 0; i < matriz.GetLength(0); i++)
+        {
+            for (int j = 0; j < matriz.GetLength(1); j++)
+            {
+                if (i == posX && j == posY)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green; // propieda para Pintar de verde el número base
+                    Console.Write(" 0 ");
+                    Console.ResetColor();
+                }
+                else
+                {
+                    Console.Write($" {matriz[i, j]} ");
+                }
+            }
+            Console.WriteLine();
+        }
+
+
+
 
 
     }

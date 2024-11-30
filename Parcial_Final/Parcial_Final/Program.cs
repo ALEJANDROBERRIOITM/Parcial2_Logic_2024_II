@@ -28,10 +28,10 @@
             // Leer entrada del usuario
             ConsoleKey tecla = Console.ReadKey().Key;
 
-            // Manejar movimiento o salida
+            // Manejar movimiento o salida de las teclas
             switch (tecla)
             {
-                case ConsoleKey.UpArrow:
+                case ConsoleKey.UpArrow: // ciclo  como se mostro en el video
                     if (x > 0)
                     {
                         total += matriz[x - 1, y]; // Sumar valor al acumulador
@@ -64,7 +64,7 @@
                     }
                     break;
                 case ConsoleKey.Escape:
-                    continuar = false; // Salir del programa
+                    continuar = false; // Salir del programa con la tecla esc
                     break;
             }
         }

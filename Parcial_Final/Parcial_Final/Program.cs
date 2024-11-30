@@ -69,7 +69,30 @@
             }
         }
 
-       
+        Console.WriteLine($"\n¡Gracias por jugar! Total acumulado del juego : {total}");
+    }
+
+    // Método para crear y llenar la matriz con números aleatorios
+    static int[,] CrearMatriz(int filas, int columnas)
+    {
+        int[,] matriz = new int[filas, columnas];
+        Random random = new Random();
+
+        for (int i = 0; i < filas; i++)
+        {
+            for (int j = 0; j < columnas; j++)
+            {
+                matriz[i, j] = random.Next(1, 10); // Números entre 1 y 9
+            }
+        }
+
+        return matriz;
+    }
+
+    // Método para mostrar la matriz en pantalla
+    static void MostrarMatriz(int[,] matriz, int posX, int posY, int total)
+    {
+
 
     }
 }
